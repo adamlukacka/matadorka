@@ -1,0 +1,11 @@
+fields:
+    site_title:
+        label: Title
+        type: text
+        default: Matadorka
+        comment: Used as site title
+    site_locale:
+        label: Locale
+        type: text
+        default: sk
+        comment: Used for HTML lang parameter

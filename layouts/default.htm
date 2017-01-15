@@ -1,0 +1,40 @@
+description = "Default layout" 
+==
+<!DOCTYPE html>
+<html lang="{{ this.theme.site_locale }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="title" content="{{ this.theme.site_title }}" /> 
+    <meta name="description" content="{{ this.page.meta_description|default(this.theme.description) }}">
+    <meta name="keywords" content="{{ this.theme.keywords }}">
+    <meta name="author" content="{{ this.theme.website_author }}">
+    <link rel="icon" type="image/png" href="{{ 'assets/images/logo.png'|theme }}">
+    <title>{{ this.page.title }}</title>
+
+    <link href="{{ ['assets/css/bootstrap.css']|theme }}" rel="stylesheet">
+    <link href="{{ ['assets/css/style.css']|theme }}" rel="stylesheet">
+
+    {% styles %}
+
+  </head>
+  <body>
+    <div id="logos">
+      {% partial "logos"%}
+    </div>
+    
+    <div id="layout-content">
+      {% page %}
+    </div>
+
+    <div id="navigation">
+      {% partial "navigation"%}
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    {% framework extras %}
+    {% scripts %}
+  
+  </body>
+</html>
